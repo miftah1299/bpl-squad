@@ -9,6 +9,19 @@ function App() {
         available: true,
         status: "available",
     });
+
+    const [selectedPlayers, setSelectedPlayers] = useState([]);
+
+
+    const handleSelectedPlayers = (player) => {
+        const isExist = selectedPlayers.find((p) => p.id === player.id);
+        if (isExist) {
+            alert("Player already selected");
+        } else {
+            setSelectedPlayers([...selectedPlayers, player]);
+        }
+    }
+
     const handleIsActiveState = (status) => {
         if (status == "available") {
             setIsActive({
@@ -23,7 +36,7 @@ function App() {
         }
     };
 
-    console.log(isActive);
+    // console.log(isActive);
 
     return (
         <>
@@ -33,6 +46,8 @@ function App() {
             <PlayerContainer
                 isActive={isActive}
                 handleIsActiveState={handleIsActiveState}
+                handleSelectedPlayers={handleSelectedPlayers}
+                selectedPlayers={selectedPlayers}
             ></PlayerContainer>
         </>
     );

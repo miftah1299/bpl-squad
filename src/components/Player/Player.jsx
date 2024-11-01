@@ -1,0 +1,43 @@
+import React from "react";
+
+const Player = ({ player }) => {
+    const { name, image, country, category, rating, handedness, price } =
+        player;
+
+    return (
+        <div className="bg-white border rounded-lg p-4 space-y-2">
+            <img
+                className="w-full h-1/2 object-cover rounded-lg"
+                src={image}
+                alt={name}
+            />
+            <h3 className="text-lg font-semibold pt-4">{name}</h3>
+            <div className="flex justify-between">
+                <p className="text-zinc-500">{country}</p>
+                <div className="bg-zinc-200 p-2 rounded-lg text-sm">{category}</div>
+            </div>
+            <hr />
+
+            <div className="flex justify-between">
+                <p className="font-semibold">Rating</p>
+                <p className="text-zinc-500">{rating}</p>
+            </div>
+
+            <div className="flex justify-between">
+                <p className="font-semibold">Handed</p>
+                <p className="text-zinc-500">{handedness}</p>
+            </div>
+
+            <div className="flex justify-between">
+                <p className="font-semibold">Price: $10</p>
+                <div>
+                    <button className="p-2 border rounded-lg text-sm hover:bg-primary">
+                        Choose Player
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Player;

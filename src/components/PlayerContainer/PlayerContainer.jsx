@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
 import Selected from "../Selected/Selected";
-import Available from "../Available/Available";
+import Allplayers from "../Allplayers/Allplayers";
 
-const PlayerContainer = ({ handleIsActiveState, isActive }) => {
-    console.log(isActive);
+const PlayerContainer = ({
+    handleIsActiveState,
+    isActive,
+    selectedPlayers,
+    handleSelectedPlayers,
+}) => {
+    // console.log(isActive);
     return (
         <div>
             <div className="w-11/12 mx-auto flex justify-between mt-10 mb-10">
@@ -36,9 +41,11 @@ const PlayerContainer = ({ handleIsActiveState, isActive }) => {
             </div>
 
             {isActive.available ? (
-                <Available></Available>
+                <Allplayers
+                    handleSelectedPlayers={handleSelectedPlayers}
+                ></Allplayers>
             ) : (
-                <Selected></Selected>
+                <Selected selectedPlayers={selectedPlayers}></Selected>
             )}
         </div>
     );

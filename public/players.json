@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Virat Kohli",
-        "image": "/images/virat_kohli.png",
+        "image": "https://i.ibb.co.com/kSVjX0n/Virat-Kohli-India-celebrates-50th-century-Cricket-November-15-2023.jpg",
         "country": "India",
         "category": "Batsman",
         "rating": 9.8,
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "name": "Steve Smith",
-        "image": "/images/steve_smith.png",
+        "image": "https://i.ibb.co.com/DpZh4MK/images-q-tbn-ANd9-Gc-QJ88y-NJuj-Rl-Vx-Cmj-M4jxiy-LFog29-YI2-VFx-Xw-s.jpg",
         "country": "Australia",
         "category": "Batsman",
         "rating": 9.5,
@@ -22,7 +22,7 @@
     {
         "id": 3,
         "name": "Kane Williamson",
-        "image": "/images/kane_williamson.png",
+        "image": "https://i.ibb.co.com/P9G2Sc1/images-q-tbn-ANd9-Gc-T-Yc-svnn-IFT-VQ1-Zaki-W-BNogsnbb1p-P-1g-s.jpg",
         "country": "New Zealand",
         "category": "Batsman",
         "rating": 9.3,
@@ -32,7 +32,7 @@
     {
         "id": 4,
         "name": "Ben Stokes",
-        "image": "/images/ben_stokes.png",
+        "image": "https://i.ibb.co.com/TtRDtL1/images-q-tbn-ANd9-Gc-QS9jwat-A6-U2heyfo6-Da-Dtoi-MKi-FCMHN5v2g-s.jpg",
         "country": "England",
         "category": "All-rounder",
         "rating": 9.6,
@@ -42,7 +42,7 @@
     {
         "id": 5,
         "name": "Jasprit Bumrah",
-        "image": "/images/jasprit_bumrah.png",
+        "image": "https://i.ibb.co.com/f2Ys10j/images-q-tbn-ANd9-Gc-SUdefdj4-T0-GI8z-Jy-EY1h-Z3-IASqn6-Afdwmt-Jw-s.jpg",
         "country": "India",
         "category": "Bowler",
         "rating": 9.4,
@@ -52,7 +52,7 @@
     {
         "id": 6,
         "name": "Pat Cummins",
-        "image": "/images/pat_cummins.png",
+        "image": "https://i.ibb.co.com/ykmxpJC/imengine-public-prod-mmg-navigacloud-2.jpg",
         "country": "Australia",
         "category": "Bowler",
         "rating": 9.2,
@@ -62,7 +62,7 @@
     {
         "id": 7,
         "name": "Rashid Khan",
-        "image": "/images/rashid_khan.png",
+        "image": "https://i.ibb.co.com/dBdqkZS/images-q-tbn-ANd9-Gc-Sw-Yz-N2k-Rp-Gy8-J-Rmkt-GF5-ipv-LI8rr7-PTBog-s.jpg",
         "country": "Afghanistan",
         "category": "Bowler",
         "rating": 9.1,
@@ -72,7 +72,7 @@
     {
         "id": 8,
         "name": "Quinton de Kock",
-        "image": "/images/quinton_de_kock.png",
+        "image": "https://i.ibb.co.com/xgpj6Lc/quinton-de-kock-361uofvid8etxpts.jpg",
         "country": "South Africa",
         "category": "Wicketkeeper",
         "rating": 9.0,
@@ -82,7 +82,7 @@
     {
         "id": 9,
         "name": "Jos Buttler",
-        "image": "/images/jos_buttler.png",
+        "image": "https://i.ibb.co.com/NKF3tbn/4a655b514a0538cc8b0bb6e7b1cabefe-Y29ud-GVud-HNl-YXJja-GFwa-Swx-Nj-Y4-Mz-E5-MTg5-2-69703789.jpg",
         "country": "England",
         "category": "Wicketkeeper",
         "rating": 8.9,
