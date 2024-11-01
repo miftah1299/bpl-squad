@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Header/Navbar";
 import PlayerContainer from "./components/PlayerContainer/PlayerContainer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     const [isActive, setIsActive] = useState({
@@ -76,6 +77,8 @@ function App() {
                 selectedPlayers={selectedPlayers}
                 handleRemovePlayer={handleRemovePlayer}
             ></PlayerContainer>
+
+            <Footer></Footer>
         </>
     );
 }
