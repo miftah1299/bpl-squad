@@ -37,4 +37,4 @@ BPL Squad is a web application that allows users to assemble their ultimate drea
 
 ## Live Demo
 
-Check out the live demo of the application [here](http://bpl-squad-using-react.surge.sh).
+Check out the live demo of the application [BPL Squad](http://bpl-squad-using-react.surge.sh).
