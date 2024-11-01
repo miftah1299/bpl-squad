@@ -13,10 +13,27 @@ const PlayerContainer = ({
     return (
         <div>
             <div className="w-11/12 mx-auto flex justify-between mb-8">
-                <div>
+                <div
+                    className={
+                        // hidden when selected is active
+                        `${isActive.available ? "" : "hidden"}`
+                    }
+                >
                     <h1 className="text-xl font-semibold">Available Players</h1>
                 </div>
 
+                <div
+                    className={`${
+                        // hiidden when available is active
+                        isActive.available ? "hidden" : ""
+                    }`}
+                >
+                    <h1 className="text-xl font-semibold">
+                        Selected Players ({selectedPlayers.length}/6)
+                    </h1>
+                </div>
+
+                {/* Buttons */}
                 <div>
                     <button
                         onClick={() => handleIsActiveState("available")}
