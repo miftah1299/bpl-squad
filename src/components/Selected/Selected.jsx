@@ -12,7 +12,7 @@ const Selected = ({
         <div className="w-11/12 mx-auto space-y-6">
             <div>
                 <h1 className="text-xl font-semibold">
-                    Selected Players (0/6)
+                    Selected Players ({selectedPlayers.length}/6)
                 </h1>
             </div>
 

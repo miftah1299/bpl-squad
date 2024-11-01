@@ -14,25 +14,40 @@ function App() {
 
     const [price, setPrice] = useState(0);
 
-    const claimPrice = (play) => {
-        setPrice(price + 5000000);
-    }
+    // claim price
+    const claimPrice = () => {
+        setPrice(price + 2500000);
+    };
 
+    // handle selected players
     const handleSelectedPlayers = (player) => {
-        const isExist = selectedPlayers.find((p) => p.id === player.id);
-        if (isExist) {
-            alert("Player already selected");
+        // if not enough balance
+        // if 6 players already selected
+        if (price < player.price) {
+            alert("Not enough balance");
         } else {
-            alert("Player selected");
-            setSelectedPlayers([...selectedPlayers, player]);
+            const isExist = selectedPlayers.find((p) => p.id === player.id);
+            if (isExist) {
+                alert("Player already selected");
+            } else {
+                if (selectedPlayers.length === 6) {
+                    alert("You can select maximum 6 players");
+                } else {
+                    alert("Player selected");
+                    setPrice(price - player.price);
+                    setSelectedPlayers([...selectedPlayers, player]);
+                }
+            }
         }
     };
 
+    // handle remove player
     const handleRemovePlayer = (id) => {
         const remainingPlayers = selectedPlayers.filter((p) => p.id !== id);
         setSelectedPlayers(remainingPlayers);
     };
 
+    // handle is active state
     const handleIsActiveState = (status) => {
         if (status == "available") {
             setIsActive({

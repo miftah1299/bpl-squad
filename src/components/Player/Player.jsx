@@ -31,7 +31,7 @@ const Player = ({ player, handleSelectedPlayers }) => {
             </div>
 
             <div className="flex justify-between">
-                <p className="font-semibold">Price: $10</p>
+                <p className="font-semibold">Price: ${price}</p>
                 <div>
                     <button
                         onClick={() => handleSelectedPlayers(player)}

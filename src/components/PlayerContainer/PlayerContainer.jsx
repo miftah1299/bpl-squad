@@ -36,7 +36,7 @@ const PlayerContainer = ({
                                 : "bg-primary font-semibold text-base p-3 px-7 border rounded-r-xl"
                         }`}
                     >
-                        Selected (0)
+                        Selected ({selectedPlayers.length})
                     </button>
                 </div>
             </div>
