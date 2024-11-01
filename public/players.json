@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Virat Kohli",
+        "image": "/images/virat_kohli.png",
+        "country": "India",
+        "category": "Batsman",
+        "rating": 9.8,
+        "handedness": "Right-handed",
+        "price": 1500000
+    },
+    {
+        "id": 2,
+        "name": "Steve Smith",
+        "image": "/images/steve_smith.png",
+        "country": "Australia",
+        "category": "Batsman",
+        "rating": 9.5,
+        "handedness": "Right-handed",
+        "price": 1400000
+    },
+    {
+        "id": 3,
+        "name": "Kane Williamson",
+        "image": "/images/kane_williamson.png",
+        "country": "New Zealand",
+        "category": "Batsman",
+        "rating": 9.3,
+        "handedness": "Right-handed",
+        "price": 1300000
+    },
+    {
+        "id": 4,
+        "name": "Ben Stokes",
+        "image": "/images/ben_stokes.png",
+        "country": "England",
+        "category": "All-rounder",
+        "rating": 9.6,
+        "handedness": "Left-handed",
+        "price": 1600000
+    },
+    {
+        "id": 5,
+        "name": "Jasprit Bumrah",
+        "image": "/images/jasprit_bumrah.png",
+        "country": "India",
+        "category": "Bowler",
+        "rating": 9.4,
+        "handedness": "Right-handed",
+        "price": 1200000
+    },
+    {
+        "id": 6,
+        "name": "Pat Cummins",
+        "image": "/images/pat_cummins.png",
+        "country": "Australia",
+        "category": "Bowler",
+        "rating": 9.2,
+        "handedness": "Right-handed",
+        "price": 1100000
+    },
+    {
+        "id": 7,
+        "name": "Rashid Khan",
+        "image": "/images/rashid_khan.png",
+        "country": "Afghanistan",
+        "category": "Bowler",
+        "rating": 9.1,
+        "handedness": "Right-handed",
+        "price": 1000000
+    },
+    {
+        "id": 8,
+        "name": "Quinton de Kock",
+        "image": "/images/quinton_de_kock.png",
+        "country": "South Africa",
+        "category": "Wicketkeeper",
+        "rating": 9.0,
+        "handedness": "Left-handed",
+        "price": 900000
+    },
+    {
+        "id": 9,
+        "name": "Jos Buttler",
+        "image": "/images/jos_buttler.png",
+        "country": "England",
+        "category": "Wicketkeeper",
+        "rating": 8.9,
+        "handedness": "Right-handed",
+        "price": 850000
+    }
+]
