@@ -1,16 +1,39 @@
+import { useState } from "react";
 import "./App.css";
-import Available from "./components/Available/Available";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Header/Navbar";
-import Selected from "./components/Selected/Selected";
+import PlayerContainer from "./components/PlayerContainer/PlayerContainer";
 
 function App() {
+    const [isActive, setIsActive] = useState({
+        available: true,
+        status: "available",
+    });
+    const handleIsActiveState = (status) => {
+        if (status == "available") {
+            setIsActive({
+                available: true,
+                status: "available",
+            });
+        } else {
+            setIsActive({
+                available: false,
+                status: "selected",
+            });
+        }
+    };
+
+    console.log(isActive);
+
     return (
         <>
             <Navbar></Navbar>
             <Header></Header>
-            <Available></Available>
-            <Selected></Selected>
+
+            <PlayerContainer
+                isActive={isActive}
+                handleIsActiveState={handleIsActiveState}
+            ></PlayerContainer>
         </>
     );
 }
