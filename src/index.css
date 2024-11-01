@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 
-/* Custom CSS */
-body {
-    font-family: 'Sora', sans-serif;
+html {
+    @apply font-sora;
 }
