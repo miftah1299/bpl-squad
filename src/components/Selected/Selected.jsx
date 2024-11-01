@@ -1,6 +1,5 @@
 // import React from "react";
 import PropTypes from "prop-types";
-import Allplayers from "../Allplayers/Allplayers";
 
 const Selected = ({
     selectedPlayers,
@@ -89,6 +88,7 @@ Selected.propTypes = {
             name: PropTypes.string.isRequired,
         })
     ).isRequired,
+    handleIsActiveState: PropTypes.func.isRequired,
     handleRemovePlayer: PropTypes.func.isRequired,
 };
 

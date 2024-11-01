@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Navbar = ({ price }) => {
     return (
         <nav className="w-11/12 mx-auto p-4 text-base">
@@ -45,6 +47,9 @@ const Navbar = ({ price }) => {
             </div>
         </nav>
     );
+};
+Navbar.propTypes = {
+    price: PropTypes.number.isRequired,
 };
 
 export default Navbar;

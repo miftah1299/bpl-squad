@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import PropTypes from "prop-types";
 
 const Player = ({ player, handleSelectedPlayers }) => {
     const { name, image, country, category, rating, handedness, price } =
@@ -43,6 +44,18 @@ const Player = ({ player, handleSelectedPlayers }) => {
             </div>
         </div>
     );
+};
+Player.propTypes = {
+    player: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        country: PropTypes.string.isRequired,
+        category: PropTypes.string.isRequired,
+        rating: PropTypes.number.isRequired,
+        handedness: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+    }).isRequired,
+    handleSelectedPlayers: PropTypes.func.isRequired,
 };
 
 export default Player;

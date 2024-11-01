@@ -61,6 +61,9 @@ PlayerContainer.propTypes = {
         available: PropTypes.bool.isRequired,
         selected: PropTypes.bool.isRequired,
     }).isRequired,
+    handleSelectedPlayers: PropTypes.func.isRequired,
+    handleRemovePlayer: PropTypes.func.isRequired,
+    selectedPlayers: PropTypes.array.isRequired,
 };
 
 export default PlayerContainer;
