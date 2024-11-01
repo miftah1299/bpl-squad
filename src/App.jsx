@@ -12,6 +12,12 @@ function App() {
 
     const [selectedPlayers, setSelectedPlayers] = useState([]);
 
+    const [price, setPrice] = useState(0);
+
+    const claimPrice = (play) => {
+        setPrice(price + 5000000);
+    }
+
     const handleSelectedPlayers = (player) => {
         const isExist = selectedPlayers.find((p) => p.id === player.id);
         if (isExist) {
@@ -45,8 +51,8 @@ function App() {
 
     return (
         <>
-            <Navbar></Navbar>
-            <Header></Header>
+            <Navbar price={price}></Navbar>
+            <Header price={price} claimPrice={claimPrice}></Header>
 
             <PlayerContainer
                 isActive={isActive}

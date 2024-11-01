@@ -1,7 +1,13 @@
 // import React from "react";
 import PropTypes from "prop-types";
+import Allplayers from "../Allplayers/Allplayers";
 
-const Selected = ({ selectedPlayers, handleRemovePlayer }) => {
+const Selected = ({
+    selectedPlayers,
+    handleRemovePlayer,
+    isActive,
+    handleIsActiveState,
+}) => {
     return (
         <div className="w-11/12 mx-auto space-y-6">
             <div>
@@ -57,10 +63,21 @@ const Selected = ({ selectedPlayers, handleRemovePlayer }) => {
             ))}
 
             <div className="inline-block border border-black rounded-xl p-2">
-                <button className="bg-primary p-3 px-5 rounded-lg text-black font-semibold">
+                <button
+                    onClick={() => handleIsActiveState("available")}
+                    className="bg-primary p-3 px-5 rounded-lg text-black font-semibold"
+                >
                     Add More Player
                 </button>
             </div>
+
+            {/* {isActive.available ? (
+                <Allplayers
+                ></Allplayers>
+            ) : (
+                <Selected
+                ></Selected>
+            )} */}
         </div>
     );
 };

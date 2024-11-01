@@ -12,7 +12,7 @@ const PlayerContainer = ({
     // console.log(isActive);
     return (
         <div>
-            <div className="w-11/12 mx-auto flex justify-between mt-10 mb-10">
+            <div className="w-11/12 mx-auto flex justify-between mb-8">
                 <div>
                     <h1 className="text-xl font-semibold">Available Players</h1>
                 </div>
@@ -22,7 +22,7 @@ const PlayerContainer = ({
                         onClick={() => handleIsActiveState("available")}
                         className={`${
                             isActive.available
-                                ? "bg-primary text-base p-3 px-7 border rounded-l-xl"
+                                ? "bg-primary font-semibold text-base p-3 px-7 border rounded-l-xl"
                                 : "text-zinc-500 text-base p-3 px-7 border rounded-l-xl"
                         }`}
                     >
@@ -33,7 +33,7 @@ const PlayerContainer = ({
                         className={`${
                             isActive.available
                                 ? "text-zinc-500 text-base p-3 px-7 border rounded-r-xl"
-                                : "bg-primary text-base p-3 px-7 border rounded-r-xl"
+                                : "bg-primary font-semibold text-base p-3 px-7 border rounded-r-xl"
                         }`}
                     >
                         Selected (0)
