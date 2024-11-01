@@ -1,6 +1,6 @@
 import React from "react";
 
-const Player = ({ player }) => {
+const Player = ({ player, handleSelectedPlayers }) => {
     const { name, image, country, category, rating, handedness, price } =
         player;
 
@@ -14,7 +14,9 @@ const Player = ({ player }) => {
             <h3 className="text-lg font-semibold pt-4">{name}</h3>
             <div className="flex justify-between">
                 <p className="text-zinc-500">{country}</p>
-                <div className="bg-zinc-200 p-2 rounded-lg text-sm">{category}</div>
+                <div className="bg-zinc-200 p-2 rounded-lg text-sm">
+                    {category}
+                </div>
             </div>
             <hr />
 
@@ -31,7 +33,10 @@ const Player = ({ player }) => {
             <div className="flex justify-between">
                 <p className="font-semibold">Price: $10</p>
                 <div>
-                    <button className="p-2 border rounded-lg text-sm hover:bg-primary">
+                    <button
+                        onClick={() => handleSelectedPlayers(player)}
+                        className="p-2 border rounded-lg text-sm hover:bg-primary"
+                    >
                         Choose Player
                     </button>
                 </div>

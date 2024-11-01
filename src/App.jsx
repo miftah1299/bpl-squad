@@ -18,6 +18,7 @@ function App() {
         if (isExist) {
             alert("Player already selected");
         } else {
+            alert("Player selected");
             setSelectedPlayers([...selectedPlayers, player]);
         }
     }
