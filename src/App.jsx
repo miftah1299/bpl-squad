@@ -12,7 +12,6 @@ function App() {
 
     const [selectedPlayers, setSelectedPlayers] = useState([]);
 
-
     const handleSelectedPlayers = (player) => {
         const isExist = selectedPlayers.find((p) => p.id === player.id);
         if (isExist) {
@@ -21,7 +20,12 @@ function App() {
             alert("Player selected");
             setSelectedPlayers([...selectedPlayers, player]);
         }
-    }
+    };
+
+    const handleRemovePlayer = (id) => {
+        const remainingPlayers = selectedPlayers.filter((p) => p.id !== id);
+        setSelectedPlayers(remainingPlayers);
+    };
 
     const handleIsActiveState = (status) => {
         if (status == "available") {
@@ -49,6 +53,7 @@ function App() {
                 handleIsActiveState={handleIsActiveState}
                 handleSelectedPlayers={handleSelectedPlayers}
                 selectedPlayers={selectedPlayers}
+                handleRemovePlayer={handleRemovePlayer}
             ></PlayerContainer>
         </>
     );

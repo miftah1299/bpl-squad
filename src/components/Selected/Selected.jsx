@@ -1,7 +1,7 @@
 // import React from "react";
 import PropTypes from "prop-types";
 
-const Selected = ({ selectedPlayers }) => {
+const Selected = ({ selectedPlayers, handleRemovePlayer }) => {
     return (
         <div className="w-11/12 mx-auto space-y-6">
             <div>
@@ -33,7 +33,10 @@ const Selected = ({ selectedPlayers }) => {
                         </div>
                     </div>
                     <div>
-                        <button className="text-red-600">
+                        <button
+                            onClick={() => handleRemovePlayer(player.id)}
+                            className="text-red-600 hover:text-red-700"
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -61,6 +64,7 @@ const Selected = ({ selectedPlayers }) => {
         </div>
     );
 };
+
 Selected.propTypes = {
     selectedPlayers: PropTypes.arrayOf(
         PropTypes.shape({
@@ -68,6 +72,7 @@ Selected.propTypes = {
             name: PropTypes.string.isRequired,
         })
     ).isRequired,
+    handleRemovePlayer: PropTypes.func.isRequired,
 };
 
 export default Selected;

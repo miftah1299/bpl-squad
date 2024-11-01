@@ -7,6 +7,7 @@ const PlayerContainer = ({
     isActive,
     selectedPlayers,
     handleSelectedPlayers,
+    handleRemovePlayer,
 }) => {
     // console.log(isActive);
     return (
@@ -45,7 +46,10 @@ const PlayerContainer = ({
                     handleSelectedPlayers={handleSelectedPlayers}
                 ></Allplayers>
             ) : (
-                <Selected selectedPlayers={selectedPlayers}></Selected>
+                <Selected
+                    selectedPlayers={selectedPlayers}
+                    handleRemovePlayer={handleRemovePlayer}
+                ></Selected>
             )}
         </div>
     );
