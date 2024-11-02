@@ -64,6 +64,7 @@ const PlayerContainer = ({
                 ></Allplayers>
             ) : (
                 <Selected
+                    isActive={isActive}
                     selectedPlayers={selectedPlayers}
                     handleRemovePlayer={handleRemovePlayer}
                 ></Selected>

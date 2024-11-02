@@ -1,4 +1,7 @@
-// import React from "react";
+import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import PropTypes from "prop-types";
 
 const Header = ({ claimPrice, price }) => {
@@ -17,11 +20,15 @@ const Header = ({ claimPrice, price }) => {
             </p>
             <div className="inline-block border border-primary rounded-xl p-2">
                 <button
-                    onClick={() => claimPrice(price)}
+                    onClick={() => {
+                        claimPrice(price);
+                        toast("Free Credit Claimed");
+                    }}
                     className="bg-primary font-bold p-3 px-5 rounded-lg text-black"
                 >
                     Claim Free Credit
                 </button>
+                {/* <ToastContainer /> */}
             </div>
         </div>
     );

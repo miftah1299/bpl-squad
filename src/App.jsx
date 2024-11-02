@@ -1,3 +1,6 @@
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
@@ -17,27 +20,25 @@ function App() {
 
     // claim price
     const claimPrice = () => {
-        setPrice(price + 2500000);
+        setPrice(price + 25000);
     };
 
     // handle selected players
     const handleSelectedPlayers = (player) => {
         // if not enough balance
         // if 6 players already selected
-        if (price < player.price) {
-            alert("Not enough balance");
+        const isExist = selectedPlayers.find((p) => p.id === player.id);
+        if (isExist) {
+            toast.error("Player already selected");
+        } else if (price < player.price) {
+            toast.error("Not enough balance");
         } else {
-            const isExist = selectedPlayers.find((p) => p.id === player.id);
-            if (isExist) {
-                alert("Player already selected");
+            if (selectedPlayers.length === 6) {
+                toast.error("You can select maximum 6 players");
             } else {
-                if (selectedPlayers.length === 6) {
-                    alert("You can select maximum 6 players");
-                } else {
-                    alert("Player selected");
-                    setPrice(price - player.price);
-                    setSelectedPlayers([...selectedPlayers, player]);
-                }
+                toast.success("Player selected");
+                setPrice(price - player.price);
+                setSelectedPlayers([...selectedPlayers, player]);
             }
         }
     };
@@ -68,7 +69,11 @@ function App() {
     return (
         <>
             <Navbar price={price}></Navbar>
-            <Header price={price} claimPrice={claimPrice}></Header>
+            <Header
+                price={price}
+                claimPrice={claimPrice}
+                handleIsActiveState={handleIsActiveState}
+            ></Header>
 
             <PlayerContainer
                 isActive={isActive}
@@ -79,6 +84,7 @@ function App() {
             ></PlayerContainer>
 
             <Footer></Footer>
+            <ToastContainer />
         </>
     );
 }

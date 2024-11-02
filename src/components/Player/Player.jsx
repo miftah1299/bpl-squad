@@ -36,7 +36,7 @@ const Player = ({ player, handleSelectedPlayers }) => {
                 <div>
                     <button
                         onClick={() => handleSelectedPlayers(player)}
-                        className="p-2 border rounded-lg text-sm hover:bg-primary"
+                        className="p-2 border rounded-lg text-sm font-medium hover:bg-primary"
                     >
                         Choose Player
                     </button>

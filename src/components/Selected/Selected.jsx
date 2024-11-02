@@ -1,5 +1,9 @@
-// import React from "react";
+import React from "react";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import PropTypes from "prop-types";
+import Allplayers from "../Allplayers/Allplayers";
 
 const Selected = ({
     selectedPlayers,
@@ -9,7 +13,6 @@ const Selected = ({
 }) => {
     return (
         <div className="w-11/12 mx-auto space-y-6">
-
             {selectedPlayers.map((player) => (
                 <div
                     key={player.id}
@@ -34,7 +37,10 @@ const Selected = ({
                     </div>
                     <div>
                         <button
-                            onClick={() => handleRemovePlayer(player.id)}
+                            onClick={() => {
+                                handleRemovePlayer(player.id);
+                                toast("Player Removed");
+                            }}
                             className="text-red-600 hover:text-red-700"
                         >
                             <svg
@@ -52,6 +58,7 @@ const Selected = ({
                                 />
                             </svg>
                         </button>
+                        {/* <ToastContainer /> */}
                     </div>
                 </div>
             ))}
@@ -66,11 +73,9 @@ const Selected = ({
             </div>
 
             {/* {isActive.available ? (
-                <Allplayers
-                ></Allplayers>
+                <Allplayers></Allplayers>
             ) : (
-                <Selected
-                ></Selected>
+                <Selected></Selected>
             )} */}
         </div>
     );
@@ -84,6 +89,9 @@ Selected.propTypes = {
         })
     ).isRequired,
     handleIsActiveState: PropTypes.func.isRequired,
+    isActive: PropTypes.shape({
+        available: PropTypes.bool.isRequired,
+    }).isRequired,
     handleRemovePlayer: PropTypes.func.isRequired,
 };
 
