@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -8,8 +8,7 @@ import Allplayers from "../Allplayers/Allplayers";
 const Selected = ({
     selectedPlayers,
     handleRemovePlayer,
-    isActive,
-    handleIsActiveState,
+    handleSelectedPlayers,
 }) => {
     return (
         <div className="w-11/12 mx-auto space-y-6">
@@ -64,19 +63,10 @@ const Selected = ({
             ))}
 
             <div className="inline-block border border-black rounded-xl p-2">
-                <button
-                    onClick={() => handleIsActiveState("available")}
-                    className="bg-primary p-3 px-5 rounded-lg text-black font-semibold"
-                >
+                <button className="bg-primary p-3 px-5 rounded-lg text-black font-semibold">
                     Add More Player
                 </button>
             </div>
-
-            {/* {isActive.available ? (
-                <Allplayers></Allplayers>
-            ) : (
-                <Selected></Selected>
-            )} */}
         </div>
     );
 };
@@ -88,6 +78,7 @@ Selected.propTypes = {
             name: PropTypes.string.isRequired,
         })
     ).isRequired,
+    handleSelectedPlayers: PropTypes.func.isRequired,
     handleIsActiveState: PropTypes.func.isRequired,
     isActive: PropTypes.shape({
         available: PropTypes.bool.isRequired,
