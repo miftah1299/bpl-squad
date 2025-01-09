@@ -7,6 +7,7 @@ This project is a BPL (Bangladesh Premier League) squad management application b
 -   [Installation](#installation)
 -   [Usage](#usage)
 -   [Features](#features)
+-   [Technologies Used](#technologies-used)
 -   [Live Demo](#live-demo)
 
 ## Installation
@@ -32,7 +33,7 @@ This project is a BPL (Bangladesh Premier League) squad management application b
 
 ## Usage
 
-1. Open your browser and navigate to `http://localhost:3000`.
+1. Open your browser and navigate to `http://localhost:5173`.
 2. Browse the list of available players.
 3. Select players to add to your team.
 4. Manage your team by adding or removing players.
@@ -45,6 +46,14 @@ This project is a BPL (Bangladesh Premier League) squad management application b
 -   **Budget Management**: Ensure your team stays within the budget.
 -   **Responsive Design**: The application is fully responsive and works on all devices.
 -   **Toast Notifications**: Get instant feedback with toast notifications for actions like adding or removing players.
+
+## Technologies Used
+
+-   **React**: A JavaScript library for building user interfaces.
+-   **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+-   **React Toastify**: A library for providing toast notifications in React applications.
+-   **PropTypes**: A library for type-checking React props.
+-   **Vite**: A build tool that provides a faster and leaner development experience for modern web projects.
 
 ## Live Demo
 

@@ -10,6 +10,12 @@ const Selected = ({
     handleRemovePlayer,
     handleSelectedPlayers,
 }) => {
+    const [istrue, setIstrue] = useState(false);
+    // a function onclick go to allplayers
+    const handleClick = () => {
+        setIstrue(true);
+    };
+
     return (
         <div className="w-11/12 mx-auto space-y-6">
             {selectedPlayers.map((player) => (
@@ -63,10 +69,21 @@ const Selected = ({
             ))}
 
             <div className="inline-block border border-black rounded-xl p-2">
-                <button className="bg-primary p-3 px-5 rounded-lg text-black font-semibold">
+                <button
+                    onClick={() => handleClick(true)}
+                    className="bg-primary p-3 px-5 rounded-lg text-black font-semibold"
+                >
                     Add More Player
                 </button>
             </div>
+
+            {istrue ? (
+                <Allplayers
+                    handleSelectedPlayers={handleSelectedPlayers}
+                ></Allplayers>
+            ) : (
+                <></>
+            )}
         </div>
     );
 };
